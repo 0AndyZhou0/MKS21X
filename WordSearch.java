@@ -173,9 +173,7 @@ public class WordSearch{
 	    System.exit(1);
 	}
 	if (args.length == 0){
-	    WordSearch a = new WordSearch(20,20,"words.txt");
-	    System.out.println(a);
-	    System.out.println(a.listWords());
+	    System.out.println("Please execute the command in \none of the following ways\nWordSearch rows columns File_Name\nWordSearch rows columns File_Name seed\nWordSearch rows columns File_Name seed key");
 	    System.exit(1);
 	}
 	try {
