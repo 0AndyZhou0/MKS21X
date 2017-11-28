@@ -1,0 +1,11 @@
+public class Book{
+    private String author, title, ISBN;
+    public Book(){
+	
+    }
+    public Book(String author,String title,String ISBN){
+	this.author = author;
+	this.title = title;
+	this.ISBN = ISBN;
+    }
+}
