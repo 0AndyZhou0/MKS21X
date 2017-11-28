@@ -1,0 +1,6 @@
+Class ReferenceBook extends LibraryBook{
+    private String collection;
+    public refernceBook(String a,String t,String ISBN,String callNum,String collection){
+	super(a,t,ISBN,callNum);
+	this.collection = collection;
+}
