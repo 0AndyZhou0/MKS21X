@@ -1,0 +1,36 @@
+
+Listing of books in the library
+
+Companion for Faking your way through Dental School, practice Exams, Dr. Giggles, 043-208-70-29-3, non-circulating reference book, 02-3A-43, self improvement
+Faking your way through Dental School, tried and tested techniques, Dr. Giggles, 893-408-22-92-22, book available on shelves, 02-3A-46book available on shelves
+Fantastic Beasts and Where to Find Them, Newt, 203-2034-2-21-9, non-circulating reference book, 22-C4-03, cooking
+The Odyssey to the Donut Shop, Homer Simpson, 4-554-23430-5, book available on shelves, 3E.55book available on shelves
+How To Cook for Forty Humans, Kang Kodos & Friends, 5-1334-5260-2, non-circulating reference book, 5E.2A.34, cooking
+Getting to Know Your Alternate Personalities, Dr. Demento, 873-464-78-94-2, non-circulating reference book, BE-0A-D3, self improvement
+The Odyssey, Homer, 0-2304-0230-2, book available on shelves, DE.EA.DBbook available on shelves
+End of book listing
+
+Checkout 
+SUPPOSED TO FAIL: Checkout of reference book
+cannot check out a reference book
+Returned
+Checkout 
+SUPPOSED TO FAIL: No Such Book
+Book 12345 not found -- checkout impossible
+
+SUPPOSED TO FAIL: Return non-existant book impossible
+Book adsf not found -- return impossible
+
+Checkout 
+
+Listing of books in the library
+
+Companion for Faking your way through Dental School, practice Exams, Dr. Giggles, 043-208-70-29-3, non-circulating reference book, 02-3A-43, self improvement
+Faking your way through Dental School, tried and tested techniques, Dr. Giggles, 893-408-22-92-22, book available on shelves, 02-3A-46book available on shelves
+Fantastic Beasts and Where to Find Them, Newt, 203-2034-2-21-9, non-circulating reference book, 22-C4-03, cooking
+The Odyssey to the Donut Shop, Homer Simpson, 4-554-23430-5, book available on shelves, 3E.55book available on shelves
+How To Cook for Forty Humans, Kang Kodos & Friends, 5-1334-5260-2, non-circulating reference book, 5E.2A.34, cooking
+Getting to Know Your Alternate Personalities, Dr. Demento, 873-464-78-94-2, non-circulating reference book, BE-0A-D3, self improvement
+The Odyssey, Homer, 0-2304-0230-2, Polyphemus: March 28, 2017, DE.EA.DBPolyphemus: March 28, 2017
+End of book listing
+
