@@ -8,12 +8,11 @@ public class SuperArrayIterator implements Iterator<String>{
     }
     public String next(){
 	if (hasNext()){
-	    current++;
+	    return data.get(current++);
 	}
 	else{
-	    System.exit(1);
+	    System.exit(0);
 	}
-	return current - 1;
     }
      public boolean hasNext(){
 	 return current <= end;

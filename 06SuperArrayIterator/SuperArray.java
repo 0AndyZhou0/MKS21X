@@ -1,14 +1,35 @@
-public class SuperArray{
+import java.util.*;
+import java.io.*;
+public class SuperArray implements Iterable<String>{
     private String[] data;
     private int size;
+
+    public Iterator<String> iterator(){
+	return new SuperArrayIterator(0,size);
+    }
+
+    class SuperArrayIterator implements Iterator<String>{
+	int current, end;
+	public SuperArrayIterator(int start,int end){
+	    current = start;
+	    this.end = end - 1;
+	}
+	public String next(){
+	    if (!hasNext()){
+		System.exit(0);
+	    }
+	    return data[current++];
+	}
+	public boolean hasNext(){
+	    return current <= end;
+	}
+    }
 
     
     public SuperArray(){
 	size = 0;
 	data = new String[size + 10];
     }
-
-    
     
     public int getSize(){
 	return size;
