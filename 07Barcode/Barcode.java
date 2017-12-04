@@ -23,6 +23,9 @@ public class Barcode{
 		   ":|:|:",":||::","|:::|","|::|:","|:|::"};
     private String zip;
     public Barcode(String zip){
+	if (zip.length() != 5){
+	    throw new IllegalArgumentException();
+	}
 	this.zip = zip;
     }
 
@@ -33,11 +36,7 @@ public class Barcode{
 
     //print out the barcode associated with the zip
     public String getCode(){
-	String code = "";
-	for (int i = 0;i < zip.length();i++){
-	    code += symbols[Character.getNumericValue(zip.charAt(i))];
-	}
-	return "|" + code + "|";
+        return toCode(zip);
     }
 
     // prints bother the zip and the barcode
@@ -67,7 +66,24 @@ public class Barcode{
 	return "" + (sum%10);
     }
 
+    // returns the number in a certain index
     private String getSymbol(char num){
 	return symbols[Character.getNumericValue(num)];
+    }
+
+    // returns code for any given zip
+    public String toCode(String zip){
+	String code = "";
+	for (int i = 0;i < zip.length();i++){
+	    code += getSymbol(zip.charAt(i));
+	}
+	return "|" + code + "|";
+    }
+
+    public String toZip(String code){
+	if (code.length() % 5 != 0){
+	    throw new IllegalArgumentException();
+	}
+	return "";
     }
 }
