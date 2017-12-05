@@ -26,6 +26,11 @@ public class Barcode{
 	if (zip.length() != 5){
 	    throw new IllegalArgumentException();
 	}
+	try{
+	    Integer.parseInt(zip);
+	}catch(IllegalArgumentException e){
+	    throw new IllegalArgumentException();
+	}
 	this.zip = zip;
     }
 
@@ -71,6 +76,15 @@ public class Barcode{
 	return symbols[Character.getNumericValue(num)];
     }
 
+    private String getNum(String symbol){
+	for (int i = 0;i < 9;i++){
+	    if (symbols[i].equals(symbol)){
+		return "" + i;
+	    }
+	}
+        throw new IllegalArgumentException();
+    }
+
     // returns code for any given zip
     public String toCode(String zip){
 	String code = "";
@@ -81,9 +95,17 @@ public class Barcode{
     }
 
     public String toZip(String code){
-	if (code.length() % 5 != 0){
+	String Zip = "";
+	if (code.length() % 5 != 25){
 	    throw new IllegalArgumentException();
 	}
-	return "";
+	try{
+	    for (int i = 0;i < 5;i++){
+	        Zip += getNum(code.substring(5*i,5*i+5));
+	    }
+	}catch(IllegalArgumentException e){
+	    throw new IllegalArgumentException();
+	}
+	return Zip;
     }
 }
