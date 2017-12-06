@@ -3,9 +3,10 @@ public class Sorts{
 	int[] a = new int[10];
 	for (int i = 0;i < a.length;i++){
 	    a[i] = (int)(Math.random()*100);
+	    System.out.println(a[i]);
 	}
 	selectionSort(a);
-	System.out.println(a);
+	System.out.println(toString(a));
     }
     
     public static String name(){
@@ -19,11 +20,14 @@ public class Sorts{
     public static void selectionSort(int[] data){
 	for (int i = 0;i < data.length;i++){
 	    int min = data[i];
+	    int other = i;
 	    for (int n = i;n < data.length;n++){
 		if (data[n] < min){
 		    min = data[n];
+		    other = n;
 		}
 	    }
+	    data[other] = data[i];
 	    data[i] = min;
 	}
     }
@@ -39,7 +43,7 @@ public class Sorts{
 	return true;
     }
 
-    public String toString(int[] ary){
+    public static String toString(int[] ary){
 	if (ary.length < 1){
 	    return "[]";
 	}
