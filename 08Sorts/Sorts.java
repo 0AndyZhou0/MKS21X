@@ -1,11 +1,11 @@
 public class Sorts{
     public static void main(String[] args){
-	int[] a = new int[10];
+	int[] a = new int[20];
 	for (int i = 0;i < a.length;i++){
 	    a[i] = (int)(Math.random()*100);
-	    System.out.println(a[i]);
 	}
-	selectionSort(a);
+	System.out.println(toString(a));
+	insertionSort(a);	
 	System.out.println(toString(a));
     }
     
@@ -32,6 +32,22 @@ public class Sorts{
 	}
     }
 
+    public static void insertionSort(int[] data){
+	for (int i = 1;i < data.length;i++){
+	    for (int n = i;n > 0;n--){
+		if (data[n] < data[n-1]){
+		    int current = data[n];
+		    data[n] = data[n-1];
+		    data[n-1] = current;
+		    //System.out.println(toString(data));  //for testing
+		}
+		else{
+		    n = 1;
+		}
+	    }
+	}
+    }
+
     // Checks if array is in order
     // For testing
     public static boolean isSorted(int[] ary){
@@ -53,4 +69,5 @@ public class Sorts{
 	}
 	return str.substring(0,str.length() - 2) + "]";
     }
+
 }
