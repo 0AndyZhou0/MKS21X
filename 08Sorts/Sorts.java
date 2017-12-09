@@ -1,11 +1,11 @@
 public class Sorts{
     public static void main(String[] args){
-	int[] a = new int[20];
+	int[] a = new int[5];
 	for (int i = 0;i < a.length;i++){
 	    a[i] = (int)(Math.random()*100);
 	}
 	System.out.println(toString(a));
-	insertionSort(a);	
+	bubbleSort(a);	
 	System.out.println(toString(a));
     }
     
@@ -36,9 +36,7 @@ public class Sorts{
 	for (int i = 1;i < data.length;i++){
 	    for (int n = i;n > 0;n--){
 		if (data[n] < data[n-1]){
-		    int current = data[n];
-		    data[n] = data[n-1];
-		    data[n-1] = current;
+		    swap(data,n,n-1);
 		    //System.out.println(toString(data));  //for testing
 		}
 		else{
@@ -48,8 +46,27 @@ public class Sorts{
 	}
     }
 
+    public static void bubbleSort(int[] data){
+	int n = data.length;
+        while(!isSorted(data)){
+	    for (int i = 1;i < n;i++){
+		if (data[i] < data[i-1]){
+		    swap(data,i,i-1);
+		}
+		System.out.println(toString(data));  //for testing
+	    }
+	    n--;
+	}
+    }
+
+    private static void swap(int[] ary,int a,int b){
+	int toSwap = ary[a];
+	ary[a] = ary[b];
+	ary[b] = toSwap;
+	
+    }
+    
     // Checks if array is in order
-    // For testing
     public static boolean isSorted(int[] ary){
 	for (int i = 0;i < ary.length - 1;i++){
 	    if (ary[i] > ary[i+1]){
