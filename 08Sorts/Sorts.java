@@ -32,6 +32,7 @@ public class Sorts{
 	}
     }
 
+    // Swaps each time instead of shifting data elements
     public static void insertionSort(int[] data){
 	for (int i = 1;i < data.length;i++){
 	    for (int n = i;n > 0;n--){
@@ -48,6 +49,12 @@ public class Sorts{
 	}
     }
 
+    public static void bubbleSort(int[] data){
+	for (int i = 0;i < length;i++){
+	    
+	}
+    }
+
     // Checks if array is in order
     // For testing
     public static boolean isSorted(int[] ary){
@@ -59,6 +66,7 @@ public class Sorts{
 	return true;
     }
 
+    // Returns the string of an array
     public static String toString(int[] ary){
 	if (ary.length < 1){
 	    return "[]";
