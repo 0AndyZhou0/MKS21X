@@ -9,12 +9,10 @@ public class Temperature extends JFrame{
 	this.setSize(800,600);
 	this.setLocation(100,100);
 	this.setDefaultCloseOperation(EXIT_ON_CLOSE);	
-	c = this.getContentPane();	
-	c.setLayout(new FlowLayout());
+	c = this.getContentPane();
 	t = new JTextField(20);
 	b = new JButton("CONVERT!!!");
 	c.add(t);
-	c.add(b);
     }
     public static void main(String[] args){
         Temperature w = new Temperature();
