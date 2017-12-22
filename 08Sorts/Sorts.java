@@ -52,14 +52,14 @@ public class Sorts{
 	}
     }
 
-    public static void bubbleSort(int[] data){
+    public static void bubbleSort(int[] data){	
+	int n = data.length;
         while(!isSorted(data)){
-	    int n = data.length;
 	    for (int i = 1;i < n;i++){
 		if (data[i] < data[i-1]){
 		    swap(data,i,i-1);
 		}
-		System.out.println(toString(data));  //for testing
+		//System.out.println(toString(data));  //for testing
 	    }
 	    n--;
 	}
