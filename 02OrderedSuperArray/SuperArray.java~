@@ -7,18 +7,8 @@ public class SuperArray{
 	size = 0;
 	data = new String[size + 10];
     }
-    
-    public SuperArray(int init){
-        size = 0;
-	data = new String[init];
-    }
 
-    public SuperArray(String[] ary){
-        size = ary.length;
-	for (int i = 0;i < ary.length;i++){
-	    add(ary[i]);
-	}
-    }
+    
     
     public int getSize(){
 	return size;
@@ -70,10 +60,7 @@ public class SuperArray{
     }
     
     private void resize(){
-        if(data.length == 0){
-	    data = new String[1];
-	}
-	String[] bigger = new String[data.length * 2];
+	String[] bigger = new String[size * 2];
 	for (int i = 0;i < size;i++){
 	    bigger[i] = data[i];
 	}

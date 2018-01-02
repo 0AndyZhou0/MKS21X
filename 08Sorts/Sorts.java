@@ -94,4 +94,7 @@ public class Sorts{
 	return str.substring(0,str.length() - 2) + "]";
     }
 
+    public static void quickSort(int[] data){
+	
+    }
 }
